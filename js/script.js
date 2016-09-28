@@ -203,7 +203,25 @@ $(function() {
 				$(this).attr("src", images[i])
 				$(this).fadeIn()
 			})
-			console.log(galleryImage.attr("src"))
 		}, 2000)
 
+
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// CSS properties 
+	//___________________
+
+	$(".gallery").css("display", "none")
+
+	var redBox = $(".red-box")
+	console.log(redBox.css("width"))
+
+	redBox.css("background-color", "#AA7700")
+	$("p").css("font-size", "18px")
+	redBox.css("width", "+=20px")
+
+	var pProperties = $("p").css(["font-size", "color"])
+	console.log(pProperties)
+
+	redBox.css("user-select", "none")
 });
