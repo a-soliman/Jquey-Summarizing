@@ -50,7 +50,7 @@ $(function() {
 	// 	fontSize : "20px"
 	// }, 1000)
 
-	
+
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++
 	// USING DELAY ANIMATION
 	//___________________
@@ -84,5 +84,29 @@ $(function() {
 	// 		})
 	// 	})
 	// })
+	// $('.lightbox').delay(1000).fadeIn(1000);
+
+
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// SELECTORES
+	//___________________
+
+	// $("p").css("background-color", "rgba(180, 180, 30, 0.8)")
+	// $(".red-box").css("background-color", "rgba(180, 180, 30, 0.8)")
+	// $("input[type='submit']").css("background-color", "rgba(180, 180, 30, 0.8)")
+	// $("input").css("background-color", "rgba(180, 180, 30, 0.8)")
+
+	// $("li:last").css("background-color", "rgba(180, 180, 30, 0.8)")
+	// $("li:even").css("background-color", "rgba(180, 180, 30, 0.8)")
+
+
+	// $("#list").find("li").css("background-color", "grey")
+	// $("#list").children("li").css("background-color", "grey")
+
+	// $(":header").next().css("background-color", "yellow")
+
+	// $("form").children("input[type='text']").css("background-color", "yellow")
 
 });
