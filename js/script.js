@@ -158,4 +158,27 @@ $(function() {
 	// $("p").empty()
 
 	// $(".red-box, .green-box, .blue-box").empty()
+
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// MANIPULATING ATTRIBUTES  
+	// attr(), prop(), val()
+	//___________________
+
+	// var specialLink = $("#specialLink")
+	// console.log(specialLink.attr("href"))
+
+	// specialLink.attr("href", "http://www.ahmedsoliman.net")
+
+	// var checkbox = $("input:checkbox")
+
+	// console.log(checkbox.prop("checked"))
+
+	// checkbox.prop()
+
+	var textInput = $("input:text")
+	console.log(textInput.val())
+	textInput.val("Ahmed Soliman")
+
+	var rangeInput = $("input[type='range']")
+	console.log(rangeInput.val())
 });
