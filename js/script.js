@@ -134,7 +134,7 @@ $(function() {
 	// $(".blue-box").after(function() {
 	// 	return "<div class='blue-box'> Blue Again </div>"
 	// })
-	
+
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++
 	// REPLACING  
 	//___________________
@@ -144,4 +144,18 @@ $(function() {
 
 	// $("<div class='green-box'> replacing</div>").replaceAll(".red-box, .blue-box")
 
+
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// REMOVING  
+	//___________________
+
+	// $("li").remove()
+
+	// $("form").children().not("input:text, textarea, br").remove()
+
+	// $("li").detach()
+
+	// $("p").empty()
+
+	// $(".red-box, .green-box, .blue-box").empty()
 });
