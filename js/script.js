@@ -109,4 +109,39 @@ $(function() {
 
 	// $("form").children("input[type='text']").css("background-color", "yellow")
 
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// DOM
+	//___________________
+
+	// $("ul ul:first").append("<li>this is just an apended li </li>")
+
+	// $("<li>this is just an apended li </li>").appendTo($("ul ul:first"))
+
+	// $("ul ul:first").prepend("<li>this is pre pended</li>")
+
+	// $("<li>this is pre pended</li>").prependTo($("ul ul:first"))
+
+	// $(".red-box").after("<div class='red-box'> New Red</div>")
+
+	// $(".blue-box").before("<div class='blue-box'> Blue friend</div>")
+
+	// $(".blue-box").before("<div class='blue-box'> Blue friend </div>")
+
+	// $(".red-box").after("<div class='red-box'> New Red</div>")
+	// $(".green-box").before("<div class='green-box'> green sep</div>")
+	// $(".blue-box").after(function() {
+	// 	return "<div class='blue-box'> Blue Again </div>"
+	// })
+	
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// REPLACING  
+	//___________________
+
+	// $("li").replaceWith("<li> I'm Replacing every list item</li>")
+	// $('.red-box, .blue-box').replaceWith("<div class='green-box'> replacing</div>")
+
+	// $("<div class='green-box'> replacing</div>").replaceAll(".red-box, .blue-box")
+
 });
