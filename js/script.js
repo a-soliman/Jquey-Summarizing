@@ -50,4 +50,39 @@ $(function() {
 	// 	fontSize : "20px"
 	// }, 1000)
 
+	
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// USING DELAY ANIMATION
+	//___________________
+
+	// $(".red-box").fadeTo(1000, 0.2)
+	// $(".green-box").delay(1000).fadeTo(1000, 0.5)
+	// $(".blue-box").delay(2000).fadeTo(1000, 0.8).fadeOut(1000).fadeIn()
+
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// call-back function
+	//___________________
+
+	// $(".red-box").fadeTo(1000, 0, function() {
+	// 	$(".green-box").fadeTo(1000, 0, function() {
+	// 		$(".blue-box").fadeTo(1000, 0)
+	// 	})
+	// })
+
+	// $(".red-box").fadeTo(1000, 0, function() {
+	// 	$(".green-box").fadeTo(1000, 0, function() {
+	// 		$(".blue-box").animate({
+	// 			marginLeft : "200px"
+	// 		}, 500, function() {
+	// 			$(".blue-box").animate({
+	// 				marginLeft : "-=200px"
+	// 			}, 1000, function() {
+	// 				$(".green-box").fadeTo(500, 0.9, function() {
+	// 					$(".red-box").fadeTo(2000, 1)
+	// 				})
+	// 			})		
+	// 		})
+	// 	})
+	// })
+
 });
