@@ -23,5 +23,31 @@ $(function() {
 	// $("p").slideDown(2000);
 
 	// $('.blue-box').slideToggle(2000)
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	// CUSTOM ANIMATION
+	//__________________
+
+	// $(".blue-box").animate({
+	// 	"margin-left" : "200px"
+	// })
+	// $(".blue-box").animate({
+	// 	"margin-left" : "-=80px"
+	// }, 1000)
+	// $(".blue-box").animate({
+	// 	"margin-left" : "-=120px"
+	// }, 200)
+
+	// $(".blue-box").animate({
+	// 	marginLeft : "200px",
+	// 	opacity : "0",
+	// 	marginTop : "25px",
+	// 	width : "50px",
+	// 	height : "50px"
+	// }, 1000)
+
+	// $("p").animate({
+	// 	fontSize : "20px"
+	// }, 1000)
 
 });
