@@ -261,4 +261,9 @@ $(function() {
 
 	gallery.removeData("name")
 	console.log(gallery.data("name")) // should give undefined
+
+	//============ using the data props in html =================
+	var red = $(".red-box")
+
+	console.log(red.data("name"))
 });
