@@ -296,16 +296,35 @@ $(function() {
 		$(this).fadeTo(1000, 0.5)
 	})
 
-	$("#btn-hover").hover(function() {
-		$(this).css("background-color", "black")
-		$(this).css("color", "wheat")
+	// $("#btn-hover").hover(function() {
+	// 	$(this).css("background-color", "black")
+	// 	$(this).css("color", "wheat")
+	// })
+
+	// $(".green-box").hover(function() {
+	// 	$(this).text("I was hoverd!")
+	// })
+
+	var blueBox = $(".blue-box")
+	var redBox = $(".red-box")
+	var greenBox = $(".green-box")
+
+	blueBox.mouseenter(function() {
+		$(this).stop().fadeTo(500, 0.5)
+	})
+	blueBox.mouseleave(function() {
+		$(this).stop().fadeTo(500, 1)
 	})
 
 
 
-	$(".green-box").hover(function() {
-		$(this).text("I was hoverd!")
+	//hover(handlerIn, hamdlerOut)
+	greenBox.hover(function(){
+		$(this).stop().fadeTo(500, 0.5)
+	}, function() {
+		$(this).stop().fadeTo(500, 1)
 	})
+
 
 
 
