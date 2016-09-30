@@ -272,13 +272,29 @@ $(function() {
 	// // text() , html()
 	// //=================================================================
 
-	var firstPar = $("p:first")
+	// var firstPar = $("p:first")
 
-	console.log(firstPar.html())
-	console.log(firstPar.text())
+	// console.log(firstPar.html())
+	// console.log(firstPar.text())
 
-	firstPar.text("<strong>Ahmed</strong> was here!")
-	firstPar.html("<strong>Ahmed</strong> was here!")
+	// // firstPar.text("<strong>Ahmed</strong> was here!")
+	// // firstPar.html("<strong>Ahmed</strong> was here!")
+
+	// firstPar.html(firstPar.html() + "<strong>Did you see me!?</strong>")
+
+
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// Handling Events
+	//___________________
+	$("#btn-click").click(function(event) {
+		console.log(event)
+		alert("you got it!")
+	})
+	$(".red-box").click(function() {
+		$(this).fadeTo(1000, 0.5)
+	})
 
 
 
