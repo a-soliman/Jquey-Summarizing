@@ -296,6 +296,17 @@ $(function() {
 		$(this).fadeTo(1000, 0.5)
 	})
 
+	$("#btn-hover").hover(function() {
+		$(this).css("background-color", "black")
+		$(this).css("color", "wheat")
+	})
+
+
+
+	$(".green-box").hover(function() {
+		$(this).text("I was hoverd!")
+	})
+
 
 
 
