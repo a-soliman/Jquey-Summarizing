@@ -243,27 +243,48 @@ $(function() {
 	// $(".dumy").removeClass("dumy").addClass("green-box")
 
 
-	//================================================================
-	// Changing the data of an element
-	//=================================================================
-	var gallery = $(".gallery")
-	var images = [
-	"images/laptop-mobile_small",
-	"images/laptop-on-table_small",
-	"images/people-office-group-team_small"
-	]
-	gallery.data("availableImages", images)
-	console.log(gallery.data("availableImages"))
+	// //================================================================
+	// // Changing the data of an element
+	// //=================================================================
+	// var gallery = $(".gallery")
+	// var images = [
+	// "images/laptop-mobile_small",
+	// "images/laptop-on-table_small",
+	// "images/people-office-group-team_small"
+	// ]
+	// gallery.data("availableImages", images)
+	// console.log(gallery.data("availableImages"))
 
 
-	gallery.data("name", "The awesome gallery")
-	console.log(gallery.data())
+	// gallery.data("name", "The awesome gallery")
+	// console.log(gallery.data())
 
-	gallery.removeData("name")
-	console.log(gallery.data("name")) // should give undefined
+	// gallery.removeData("name")
+	// console.log(gallery.data("name")) // should give undefined
 
-	//============ using the data props in html =================
-	var red = $(".red-box")
+	// //============ using the data props in html ===========
+	// var red = $(".red-box")
 
-	console.log(red.data("name"))
+	// console.log(red.data("name"))
+
+	// //================================================================
+	// // Retriving / changing content 
+	// // text() , html()
+	// //=================================================================
+
+	var firstPar = $("p:first")
+
+	console.log(firstPar.html())
+	console.log(firstPar.text())
+
+	firstPar.text("<strong>Ahmed</strong> was here!")
+	firstPar.html("<strong>Ahmed</strong> was here!")
+
+
+
+
+
+
+
+
 });
