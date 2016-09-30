@@ -189,21 +189,21 @@ $(function() {
 	// Project photo Galarry 
 	//___________________
 
-	var galleryImage = $(".gallery").find("img").first()
-	var images = [
-		"images/laptop-mobile_small.jpg",
-		"images/laptop-on-table_small.jpg",
-		"images/people-office-group-team_small.jpg",
-		]
+	// var galleryImage = $(".gallery").find("img").first()
+	// var images = [
+	// 	"images/laptop-mobile_small.jpg",
+	// 	"images/laptop-on-table_small.jpg",
+	// 	"images/people-office-group-team_small.jpg",
+	// 	]
 
-		var i = 0
-		setInterval(function() {
-			i = (i + 1) % images.length // 0,1,2,0,1,... 
-			galleryImage.fadeOut(function() {
-				$(this).attr("src", images[i])
-				$(this).fadeIn()
-			})
-		}, 2000)
+	// 	var i = 0
+	// 	setInterval(function() {
+	// 		i = (i + 1) % images.length // 0,1,2,0,1,... 
+	// 		galleryImage.fadeOut(function() {
+	// 			$(this).attr("src", images[i])
+	// 			$(this).fadeIn()
+	// 		})
+	// 	}, 2000)
 
 
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -240,6 +240,25 @@ $(function() {
 
 	// $(".red-box").removeClass("red-box").addClass("blue-box")
 
-	$(".dumy").removeClass("dumy").addClass("green-box")
+	// $(".dumy").removeClass("dumy").addClass("green-box")
 
+
+	//================================================================
+	// Changing the data of an element
+	//=================================================================
+	var gallery = $(".gallery")
+	var images = [
+	"images/laptop-mobile_small",
+	"images/laptop-on-table_small",
+	"images/people-office-group-team_small"
+	]
+	gallery.data("availableImages", images)
+	console.log(gallery.data("availableImages"))
+
+
+	gallery.data("name", "The awesome gallery")
+	console.log(gallery.data())
+
+	gallery.removeData("name")
+	console.log(gallery.data("name")) // should give undefined
 });
