@@ -419,4 +419,16 @@ $(function() {
 
 	})
 
+	var inputFilds = $("input, textarea").not("input:submit")
+	inputFilds.focus(function() {
+		$(this).css("box-shadow", "0 0 4px #666")
+	})
+
+	inputFilds.blur(function() {
+		$(this).css("box-shadow", "none")
+	})
+
+
+
+
 });
