@@ -288,13 +288,13 @@ $(function() {
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++
 	// Handling Events
 	//___________________
-	$("#btn-click").click(function(event) {
-		console.log(event)
-		alert("you got it!")
-	})
-	$(".red-box").click(function() {
-		$(this).fadeTo(1000, 0.5)
-	})
+	// $("#btn-click").click(function(event) {
+	// 	console.log(event)
+	// 	alert("you got it!")
+	// })
+	// $(".red-box").click(function() {
+	// 	$(this).fadeTo(1000, 0.5)
+	// })
 
 	// $("#btn-hover").hover(function() {
 	// 	$(this).css("background-color", "black")
@@ -358,6 +358,26 @@ $(function() {
 
 
 
+	//=======================================================
+	// Passing data to events
+	//=======================================================
+
+	$("#btn-click").click({
+		name: "Ahmed",
+		email: "ahmed.soliman@programmer.net",
+		domain: "www.ahmedsoliman.net"
+	}, function(event) {
+		greetUser(event.data)
+	})
+
+
+	function greetUser(userdata) {
+		username = userdata.name
+		userMail = userdata.email
+		userDomain = userdata.domain
+
+		alert("Welcome " + username + " your Email: " + userMail + "your domain " + userDomain)
+	}
 
 
 
