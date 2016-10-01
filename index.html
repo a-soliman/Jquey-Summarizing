@@ -27,6 +27,8 @@
     
     <div class="gallery">
         <img src="images/laptop-mobile_small.jpg" alt="">
+        <img src="images/laptop-on-table_small.jpg" alt="">
+        <img src="images/people-office-group-team_small.jpg" alt="">
     </div>
 
 
@@ -53,13 +55,21 @@
         </ul></li>
     </ul>
 
-    <form action="">
-      <input type="password"><br>
-      <input type="text" value="Ahmed"> <br>
-      <input type="range" min="1" max="10" value="7"> <br>
-      <input type="email"><br>
-      <input type="checkbox" name="cb" checked><label for="cb">check me</label> <br>
-      <textarea name="" id="" cols="30" rows="10"></textarea><br>
+    <form action="" id="form">
+      <input type="text" id="name" placeholder="Enter Your name">
+      <span id="name-feedback"></span> <br>
+
+      <input type="password" id="password" placeholder="Write your password"> 
+      <span id="password-feedback"></span> <br>
+
+      <input id="amount" type="range" min="1" max="10" value="7"> <br>
+    
+      <textarea id="message" name="" id="" cols="30" rows="10"></textarea> 
+      <span id="message-feedback"></span> <br>
+
+      <input type="checkbox" name="cb" id="checkbox" checked><label for="cb">check me</label> 
+      <span id="checkbox-feedback"></span> <br>
+      
       <input type="submit" value="submit">
     </form>
   </div>
