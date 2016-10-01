@@ -428,32 +428,39 @@ $(function() {
 	// 	$(this).css("box-shadow", "none")
 	// })
 
-	$("input:text").blur(function() {
-		var value = $(this).val()
-		if(value < 4 ) {
-			alert("hey yoo! normal name..")
-			$(this).css("box-shadow", "0 0 4px red")
-		}else {
-			$(this).css("box-shadow", "0 0 4px green ")
+	// $("input:text").blur(function() {
+	// 	var value = $(this).val()
+	// 	if(value < 4 ) {
+	// 		alert("hey yoo! normal name..")
+	// 		$(this).css("box-shadow", "0 0 4px red")
+	// 	}else {
+	// 		$(this).css("box-shadow", "0 0 4px green ")
+	// 	}
+	// })
+
+
+	// $("#checkbox").change(function() {
+	// 	var isChecked = $(this).is(":checked") // prop("checked")
+	// 	if(isChecked) {
+	// 		$(this).add("label[for='cb']").css("box-shadow", "0 0 4px #181")
+	// 	} else {
+	// 		$(this).add("label[for='cb']").css("box-shadow", "0 0 4px #811")
+	// 	}
+
+	// })
+	// $("select").change(function() {
+	// 	var selectedOption = $(this).find(":selected").text()
+	// 	alert(selectedOption)
+
+	// })
+
+	$("#form").submit(function() {
+		var textarea = $("#message")
+
+		if (textarea.val().trim() == "" || textarea.val() < 6 ) {
+			$("#message").css("box-shadow", "0 0 4px #811")
+			event.preventDefault()
 		}
 	})
-
-
-	$("#checkbox").change(function() {
-		var isChecked = $(this).is(":checked") // prop("checked")
-		if(isChecked) {
-			$(this).add("label[for='cb']").css("box-shadow", "0 0 4px #181")
-		} else {
-			$(this).add("label[for='cb']").css("box-shadow", "0 0 4px #811")
-		}
-
-	})
-	$("select").change(function() {
-		var selectedOption = $(this).find(":selected").text()
-		alert(selectedOption)
-
-	})
-
-
 
 });
