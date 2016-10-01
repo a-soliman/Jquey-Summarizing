@@ -464,26 +464,66 @@ $(function() {
 	// })
 
 
-	$("#form").submit(function() {
+	$("#form").submit(function(event) {
 		var name = $("#name").val()
 		var password = $("#password").val()
 		var message = $("#message").val()
 		var checkbox = $("#checkbox").is(":checked")
 		
 		validateNameField(name, event)
+		validetePasswordField(password, event)
+		validateMessageField(message, event)
+		checkedBox(checkbox, event)
 	})
 
 
 	function validateNameField(name, event) {
-		if (!isVaildName(name)) {
+		if (!isValidName(name)) {
 			$("#name-feedback").text("Please type your name!").css("color", "#811")
 			event.preventDefault()
 		}else {
 			$("#name-feedback").text("")
 		}
 	}
-	function isVaildName(name) {
+
+	function validetePasswordField(password, event) {
+		if(!isValidPassword(password)) {
+			$("#password-feedback").text("Password should contain least of 6 chr.").css("color", "#811")
+			event.preventDefault()
+		}else {
+			$("#password-feedback").text("")
+		}
+	}
+
+	function validateMessageField(message, event) {
+		if(!isValidMessage(message)) {
+			$("#message-feedback").text("Please type your message!").css("color", "#811")
+			event.preventDefault()
+		}else {
+			$("#message-feedback").text("")	
+		}
+	}
+	function checkedBox(checkbox, event) {
+		if(($("#checkbox").prop("checked")) === false) {
+			$("#checkbox-feedback").text("you must check the box!").css("color", "#811")
+			event.preventDefault()
+		}else {
+			$("#checkbox-feedback").text("")
+		}
+	}
+
+
+	function isValidName(name) {
 		return name.length >= 2
+	}
+	function isValidPassword(password) {
+		return password.length >= 6
+	}
+	function isValidMessage(message) {
+		return message.length >= 8
+	}
+	function isChecked(checkbox) {
+		return checkbox = true
 	}
 });
 	
