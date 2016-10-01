@@ -400,6 +400,10 @@ $(function() {
 		var image = $("<img>").attr("src", source).css("width", "100%")
 		$(".lightbox").empty().append(image).fadeIn(2000)
 	})
+	
+	$(".lightbox").click(function() {
+		$(this).stop().fadeOut()
+	})
 
 
 	
