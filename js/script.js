@@ -305,56 +305,56 @@ $(function() {
 	// 	$(this).text("I was hoverd!")
 	// })
 
-	var blueBox = $(".blue-box")
-	var redBox = $(".red-box")
-	var greenBox = $(".green-box")
+	// var blueBox = $(".blue-box")
+	// var redBox = $(".red-box")
+	// var greenBox = $(".green-box")
 
-	blueBox.mouseenter(function() {
-		$(this).stop().fadeTo(500, 0.5)
-	})
-	blueBox.mouseleave(function() {
-		$(this).stop().fadeTo(500, 1)
-	})
+	// blueBox.mouseenter(function() {
+	// 	$(this).stop().fadeTo(500, 0.5)
+	// })
+	// blueBox.mouseleave(function() {
+	// 	$(this).stop().fadeTo(500, 1)
+	// })
 
 
 
-	//hover(handlerIn, hamdlerOut)
-	greenBox.hover(function(){
-		$(this).stop().fadeTo(500, 0.5)
-	}, function() {
-		$(this).stop().fadeTo(500, 1)
-	})
+	// //hover(handlerIn, hamdlerOut)
+	// greenBox.hover(function(){
+	// 	$(this).stop().fadeTo(500, 0.5)
+	// }, function() {
+	// 	$(this).stop().fadeTo(500, 1)
+	// })
 
 
 
 	// attaching the same elements to diffrent events
 	// .on('click', function() {.....})
 	//==================
-	var galleryImage = $(".gallery").find("img")
+	// var galleryImage = $(".gallery").find("img")
 
-	galleryImage.on("click", changeImage)
+	// galleryImage.on("click", changeImage)
 
-	function changeImage() {
-		var images = [
-		"images/laptop-mobile_small.jpg",
-		"images/laptop-on-table_small.jpg",
-		"images/people-office-group-team_small.jpg"
-		]
-		var i = 0 
-		i = ( i + 1 ) % images.length
-	 	$(this).fadeOut(function() {
-	 		$(this).attr("src", images[i]).fadeIn()
-	 	})
-	}
+	// function changeImage() {
+	// 	var images = [
+	// 	"images/laptop-mobile_small.jpg",
+	// 	"images/laptop-on-table_small.jpg",
+	// 	"images/people-office-group-team_small.jpg"
+	// 	]
+	// 	var i = 0 
+	// 	i = ( i + 1 ) % images.length
+	//  	$(this).fadeOut(function() {
+	//  		$(this).attr("src", images[i]).fadeIn()
+	//  	})
+	// }
 
 	//=======================================================
 	// Delegated Events
 	//(parent).on("event", "")
 	//=======================================================
 
-	$("body").on("mouseenter", "li", function() {
-		$(this).css("color", "red")
-	})
+	// $("body").on("mouseenter", "li", function() {
+	// 	$(this).css("color", "red")
+	// })
 
 
 
@@ -381,6 +381,22 @@ $(function() {
 
 
 
+	//=======================================================
+	// CREATING AN IMAGE GALLERY WITH LIGHTBOX PREVIEW
+	//=======================================================
 
+	var galleryItems = $(".gallery").find("img")
+	galleryItems.css("width", "33%").css("opacity", "0.6")
+
+	galleryItems.mouseenter(function() {
+		$(this).stop().fadeTo(500, 1)
+	})
+
+	galleryItems.mouseleave(function() {
+		$(this).stop().fadeTo(500, 0.6)
+	})
+
+	
+	
 
 });
