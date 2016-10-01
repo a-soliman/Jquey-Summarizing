@@ -454,13 +454,36 @@ $(function() {
 
 	// })
 
-	$("#form").submit(function() {
-		var textarea = $("#message")
+	// $("#form").submit(function() {
+	// 	var textarea = $("#message")
 
-		if (textarea.val().trim() == "" || textarea.val() < 6 ) {
-			$("#message").css("box-shadow", "0 0 4px #811")
-			event.preventDefault()
-		}
+	// 	if (textarea.val().trim() == "" || textarea.val() < 6 ) {
+	// 		$("#message").css("box-shadow", "0 0 4px #811")
+	// 		event.preventDefault()
+	// 	}
+	// })
+
+
+	$("#form").submit(function() {
+		var name = $("#name").val()
+		var password = $("#password").val()
+		var message = $("#message").val()
+		var checkbox = $("#checkbox").is(":checked")
+		
+		validateNameField(name, event)
 	})
 
+
+	function validateNameField(name, event) {
+		if (!isVaildName(name)) {
+			$("#name-feedback").text("Please type your name!").css("color", "#811")
+			event.preventDefault()
+		}else {
+			$("#name-feedback").text("")
+		}
+	}
+	function isVaildName(name) {
+		return name.length >= 2
+	}
 });
+	
