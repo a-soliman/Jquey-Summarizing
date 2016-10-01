@@ -434,10 +434,25 @@ $(function() {
 			alert("hey yoo! normal name..")
 			$(this).css("box-shadow", "0 0 4px red")
 		}else {
-			$(this).css("box-shadow", "0 0 4px green")
+			$(this).css("box-shadow", "0 0 4px green ")
 		}
 	})
 
+
+	$("#checkbox").change(function() {
+		var isChecked = $(this).is(":checked") // prop("checked")
+		if(isChecked) {
+			$(this).add("label[for='cb']").css("box-shadow", "0 0 4px #181")
+		} else {
+			$(this).add("label[for='cb']").css("box-shadow", "0 0 4px #811")
+		}
+
+	})
+	$("select").change(function() {
+		var selectedOption = $(this).find(":selected").text()
+		alert(selectedOption)
+
+	})
 
 
 
