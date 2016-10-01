@@ -419,13 +419,23 @@ $(function() {
 
 	})
 
-	var inputFilds = $("input, textarea").not("input:submit")
-	inputFilds.focus(function() {
-		$(this).css("box-shadow", "0 0 4px #666")
-	})
+	// var inputFilds = $("input, textarea").not("input:submit")
+	// inputFilds.focus(function() {
+	// 	$(this).css("box-shadow", "0 0 4px #666")
+	// })
 
-	inputFilds.blur(function() {
-		$(this).css("box-shadow", "none")
+	// inputFilds.blur(function() {
+	// 	$(this).css("box-shadow", "none")
+	// })
+
+	$("input:text").blur(function() {
+		var value = $(this).val()
+		if(value < 4 ) {
+			alert("hey yoo! normal name..")
+			$(this).css("box-shadow", "0 0 4px red")
+		}else {
+			$(this).css("box-shadow", "0 0 4px green")
+		}
 	})
 
 
