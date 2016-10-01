@@ -395,8 +395,13 @@ $(function() {
 	galleryItems.mouseleave(function() {
 		$(this).stop().fadeTo(500, 0.6)
 	})
+	galleryItems.click(function() {
+		var source = $(this).attr("src")
+		var image = $("<img>").attr("src", source).css("width", "100%")
+		$(".lightbox").empty().append(image).fadeIn(2000)
+	})
 
-	
+
 	
 
 });
