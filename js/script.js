@@ -357,7 +357,6 @@ $(function() {
 	// })
 
 
-
 	//=======================================================
 	// Passing data to events
 	//=======================================================
@@ -370,7 +369,6 @@ $(function() {
 		greetUser(event.data)
 	})
 
-
 	function greetUser(userdata) {
 		username = userdata.name
 		userMail = userdata.email
@@ -378,8 +376,6 @@ $(function() {
 
 		alert("Welcome " + username + " your Email: " + userMail + "your domain " + userDomain)
 	}
-
-
 
 	//=======================================================
 	// CREATING AN IMAGE GALLERY WITH LIGHTBOX PREVIEW
@@ -400,12 +396,27 @@ $(function() {
 		var image = $("<img>").attr("src", source).css("width", "100%")
 		$(".lightbox").empty().append(image).fadeIn(2000)
 	})
-	
+
 	$(".lightbox").click(function() {
 		$(this).stop().fadeOut()
 	})
 
 
-	
+	//=======================================================
+	// Handling keyboard events
+	//=======================================================
+	$("html").keydown(function() {
+		console.log(event.which)
+
+		var rightArrow = 39
+		var leftArrow = 37
+
+		if(event.which === 39) {
+			$(".blue-box").stop().css("margin-Left", "+=10px")
+		}else if(event.which === 37) {
+			$(".blue-box").stop().css("margin-left", "-=10px")
+		}
+
+	})
 
 });
