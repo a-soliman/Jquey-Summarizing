@@ -606,6 +606,9 @@ $(function() {
 			console.log(item)
 			$("<img>").attr("src", item.media.m).appendTo("#flicker")
 
+			if (index == 4 ) {
+				return false
+			}
 		})
 	}).fail(function() {
 		alert("AJAX call failed!")
