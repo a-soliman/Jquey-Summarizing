@@ -463,8 +463,10 @@ $(function() {
 	// 	}
 	// })
 
+	var form = $("#form")
+	enableFastFeedback(form)
 
-	$("#form").submit(function(event) {
+	form.submit(function(event) {
 		var name = $("#name").val()
 		var password = $("#password").val()
 		var message = $("#message").val()
@@ -475,6 +477,61 @@ $(function() {
 		validateMessageField(message, event)
 		checkedBox(checkbox, event)
 	})
+
+	function enableFastFeedback(formElement) {
+		var nameInput = formElement.find("#name")
+		var passwordInput = formElement.find("#password")
+		var messageInput = formElement.find("#message")
+		var checkboxInput = formElement.find("#checkbox")	
+	
+		nameInput.blur(function() {
+			var name = $(this).val()
+			validateNameField(name, event)
+
+			if(!isValidName(name)) {
+				$(this).css("box-shadow" , "0 0 4px #811") 
+				$(this).css("border" , "1px solid #600")
+			} else {
+				$(this).css("box-shadow" , "0 0 4px #181") 
+				$(this).css("border" , "1px solid #060")
+			}
+		})
+		passwordInput.blur(function() {
+			var password = $(this).val()
+			validetePasswordField(password, event)
+
+			if(!isValidPassword(password)) {
+				$(this).css("box-shadow" , "0 0 4px #811") 
+				$(this).css("border" , "1px solid #600")
+			} else {
+				$(this).css("box-shadow" , "0 0 4px #181") 
+				$(this).css("border" , "1px solid #060")
+			}
+		})
+		messageInput.blur(function() {
+			var message = $(this).val()
+			validateMessageField(message, event)
+
+			if(!isValidMessage(message)) {
+				$(this).css("box-shadow" , "0 0 4px #811") 
+				$(this).css("border" , "1px solid #600")
+			} else {
+				$(this).css("box-shadow" , "0 0 4px #181") 
+				$(this).css("border" , "1px solid #060")
+			}
+		})
+		checkboxInput.blur(function() {
+			var checkbox = $(this).add("label[for='cb']")
+			var isChecked = $(this).prop("checked")
+			if(!isChecked) {
+				$(this).add("label[for='cb']").css("box-shadow" , "0 0 4px #811") 
+				$(this).add("label[for='cb']").css("border" , "1px solid #600")
+			} else {
+				$(this).add("label[for='cb']").css("box-shadow" , "0 0 4px #181") 
+				$(this).add("label[for='cb']").css("border" , "1px solid #060")
+			}
+		})
+	}
 
 
 	function validateNameField(name, event) {
