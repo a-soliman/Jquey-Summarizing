@@ -591,5 +591,19 @@ $(function() {
 	// 	}
 	// 	console.log(response)
 	// })
+
+
+	//================================================================
+	//JSON, $.getJSON()
+	var flickerApiUrl ="https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"
+
+	$.getJSON(flickerApiUrl, {
+		//options...
+	}).done(function() {
+		//success
+	}).fail(function() {
+		alert("AJAX call failed!")
+	})
+
 });
 	
