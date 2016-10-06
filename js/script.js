@@ -630,6 +630,8 @@ $(function() {
 		$.each(data.pokemon_species, function(index, pokemon) {
 		//capitalie the first letter + past the rest with removing the first letter
 		var name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
+		var par = $("<p>").html("pokemon species no. " + (index+1) +  "is " + name )
+		par.appendTo("#pokemon")
 	})
 
 
