@@ -627,8 +627,10 @@ $(function() {
 	var pokeapiUrl = "http://pokeapi.co/api/v2/generation/1"
 	$.getJSON(pokeapiUrl).done(function(data) {
 		console.log(data)
+		$.each(data.pokemon_species, function(index, pokemon) {
+		//capitalie the first letter + past the rest with removing the first letter
+		var name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
 	})
-	
 
 
 
