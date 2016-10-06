@@ -625,53 +625,49 @@ $(function() {
 	//Pokemon JSON API
 
 	var pokeapiUrl = "http://pokeapi.co/api/v2/generation/1"
-	//advaned linking to fitured chracters
-	var pokemonByName = "http://pokeapi.co/api/v2/pokemon/"
+		//advaned linking to fitured chracters
+		var pokemonByName = "http://pokeapi.co/api/v2/pokemon/"
 
 
-	$.getJSON(pokeapiUrl).done(function(data) {
-		console.log(data)
-		$.each(data.pokemon_species, function(index, pokemon) {
-		//capitalie the first letter + past the rest with removing the first letter
-		var name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
-		//creating a link
-		var link = $("<a>").attr("id", pokemon.name).attr("href", "#").append($("<strong>").text(name))
-		var par = $("<p>").html("pokemon species no. " + (index+1) +  "is " ).append(link)
-
-		//adding click event to the function
-		link.click(function(event) {
-			//JSON request to get information about the specified POKEMON
-			$.getJSON(pokemonByName + pokemon.name).done(function(details) {
-				console.log(details)
-				//specifieng the output for the details
-				var pokemonDiv = $("#pokemon-details")
-				//empting the div from any prev details
-				pokemonDiv.empty()
-				//creating an h2 and append the capitalize to to it
-				pokemonDiv.append("<h2>" + name + "</h2>")
-				//creating four images of the spcified POKEMON
-				pokemonDiv.append("<img src='" + details.sprites.front_default + "'>")
-				pokemonDiv.append("<img src='" + details.sprites.front_shiny + "'>")
-				pokemonDiv.append("<img src='" + details.sprites.back_default + "'>")
-				pokemonDiv.append("<img src='" + details.sprites.back_shiny + "'>")
+		$.getJSON(pokeapiUrl).done(function(data) {
+			console.log(data)
+			$.each(data.pokemon_species, function(index, pokemon) {
+				//capitalie the first letter + past the rest with removing the first letter
+				var name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
+				//creating a link
+				var link = $("<a>").attr("id", pokemon.name).attr("href", "#").append($("<strong>").text(name))
+				//creating a paragraph
+				var par = $("<p>").html("pokemon species no. " + (index+1) +  "is " ).append(link)
+				
+				//adding click event to the function
+				link.click(function(event) {
+					//JSON request to get information about the specified POKEMON
+					$.getJSON(pokemonByName + pokemon.name).done(function(details) {
+						console.log(details)
+						//specifieng the output for the details
+						var pokemonDiv = $("#pokemon-details")
+						//empting the div from any prev details
+						pokemonDiv.empty()
+						//creating an h2 and append the capitalize to to it
+						pokemonDiv.append("<h2>" + name + "</h2>")
+						//creating four images of the spcified POKEMON
+						pokemonDiv.append("<img src='" + details.sprites.front_default + "'>")
+						pokemonDiv.append("<img src='" + details.sprites.front_shiny + "'>")
+						pokemonDiv.append("<img src='" + details.sprites.back_default + "'>")
+						pokemonDiv.append("<img src='" + details.sprites.back_shiny + "'>")
+					})
+					event.preventDefault
+				})
+				par.appendTo("#pokemon")
 			})
-			event.preventDefault
-		})
-
-
-		par.appendTo("#pokemon")
-
-		//fail function in case the request did not work
+			
+			// fail function in case the request did not work
 		}).fail(function() {
-		console.log("the request was failed")
+			console.log("the request was failed")
 
-		//an always function will be executed regard less the status of the request.
-		// }).always(function() {
-		console.log("this is the always function ext.")
+			//an always function will be executed regard less the status of the request.
+		}).always(function() {
+			console.log("this is the always function ext.")
 		})
 
-
-
-
-});
-	
+})
