@@ -637,7 +637,16 @@ $(function() {
 		//creating a link
 		var link = $("<a>").attr("id", pokemon.name).attr("href", "#").append($("<strong>").text(name))
 		var par = $("<p>").html("pokemon species no. " + (index+1) +  "is " ).append(link)
+
+		//adding click event to the function
+		link.click(function(event) {
+			//JSON request to get information about the specified POKEMON
+			$.getJSON(pokemonByName + pokemon.name).done(function(details) {
+				console.log(details)
+
+					
 		par.appendTo("#pokemon")
+
 		//fail function in case the request did not work
 		}).fail(function() {
 		console.log("the request was failed")
