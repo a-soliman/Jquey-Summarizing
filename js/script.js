@@ -632,7 +632,9 @@ $(function() {
 		var name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
 		var par = $("<p>").html("pokemon species no. " + (index+1) +  "is " + name )
 		par.appendTo("#pokemon")
-	})
+		//fail function in case the request did not work
+		}).fail(function() {
+		console.log("the request was failed")
 
 
 
