@@ -647,6 +647,16 @@ $(function() {
 				var pokemonDiv = $("#pokemon-details")
 				//empting the div from any prev details
 				pokemonDiv.empty()
+				//creating an h2 and append the capitalize to to it
+				pokemonDiv.append("<h2>" + name + "</h2>")
+				//creating four images of the spcified POKEMON
+				pokemonDiv.append("<img src='" + details.sprites.front_default + "'>")
+				pokemonDiv.append("<img src='" + details.sprites.front_shiny + "'>")
+				pokemonDiv.append("<img src='" + details.sprites.back_default + "'>")
+				pokemonDiv.append("<img src='" + details.sprites.back_shiny + "'>")
+			})
+			event.preventDefault
+		})
 
 
 		par.appendTo("#pokemon")
