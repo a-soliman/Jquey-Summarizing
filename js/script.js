@@ -625,7 +625,9 @@ $(function() {
 	//Pokemon JSON API
 
 	var pokeapiUrl = "http://pokeapi.co/api/v2/generation/1"
-
+	$.getJSON(pokeapiUrl).done(function(data) {
+		console.log(data)
+	})
 	
 
 
