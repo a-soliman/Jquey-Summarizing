@@ -625,6 +625,10 @@ $(function() {
 	//Pokemon JSON API
 
 	var pokeapiUrl = "http://pokeapi.co/api/v2/generation/1"
+	//advaned linking to fitured chracters
+	var pokemonByName = "http://pokeapi.co/api/v2/pokemon/"
+
+	
 	$.getJSON(pokeapiUrl).done(function(data) {
 		console.log(data)
 		$.each(data.pokemon_species, function(index, pokemon) {
