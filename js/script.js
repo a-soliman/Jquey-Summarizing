@@ -592,27 +592,44 @@ $(function() {
 	// 	console.log(response)
 	// })
 
-
+	//================================================================
+	//================================================================
+	//================================================================
 	//================================================================
 	//JSON, $.getJSON()
-	var flickerApiUrl ="https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"
 
-	$.getJSON(flickerApiUrl, {
-		tags: "sun, beach",
-		tagmode: "any",
-		format: "json"
-	}).done(function(data) {
-		$.each(data.items, function(index, item) {
-			console.log(item)
-			$("<img>").attr("src", item.media.m).appendTo("#flicker")
+	//++++++++++++++++++++++++++++++++
 
-			if (index == 4 ) {
-				return false
-			}
-		})
-	}).fail(function() {
-		alert("AJAX call failed!")
-	})
+
+	// var flickerApiUrl ="https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"
+
+	// $.getJSON(flickerApiUrl, {
+	// 	tags: "sun, beach",
+	// 	tagmode: "any",
+	// 	format: "json"
+	// }).done(function(data) {
+	// 	$.each(data.items, function(index, item) {
+	// 		console.log(item)
+	// 		$("<img>").attr("src", item.media.m).appendTo("#flicker")
+
+	// 		if (index == 4 ) {
+	// 			return false
+	// 		}
+	// 	})
+	// }).fail(function() {
+	// 	alert("AJAX call failed!")
+	// })
+
+
+	//=============================================================
+	//Pokemon JSON API
+
+	var pokeapiUrl = "http://pokeapi.co/api/v2/generation/1"
+
+	
+
+
+
 
 });
 	
