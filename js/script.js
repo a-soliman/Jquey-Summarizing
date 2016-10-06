@@ -643,8 +643,12 @@ $(function() {
 			//JSON request to get information about the specified POKEMON
 			$.getJSON(pokemonByName + pokemon.name).done(function(details) {
 				console.log(details)
+				//specifieng the output for the details
+				var pokemonDiv = $("#pokemon-details")
+				//empting the div from any prev details
+				pokemonDiv.empty()
 
-					
+
 		par.appendTo("#pokemon")
 
 		//fail function in case the request did not work
