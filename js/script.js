@@ -636,6 +636,11 @@ $(function() {
 		}).fail(function() {
 		console.log("the request was failed")
 
+		//an always function will be executed regard less the status of the request.
+		// }).always(function() {
+		console.log("this is the always function ext.")
+		})
+
 
 
 
