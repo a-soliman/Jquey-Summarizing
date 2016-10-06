@@ -636,7 +636,7 @@ $(function() {
 		var name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
 		//creating a link
 		var link = $("<a>").attr("id", pokemon.name).attr("href", "#").append($("<strong>").text(name))
-		var par = $("<p>").html("pokemon species no. " + (index+1) +  "is " + name )
+		var par = $("<p>").html("pokemon species no. " + (index+1) +  "is " ).append(link)
 		par.appendTo("#pokemon")
 		//fail function in case the request did not work
 		}).fail(function() {
